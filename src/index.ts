@@ -26,6 +26,7 @@ const rules = [
   rule('Top Level').manipulators([
     map('caps_lock').to('left_control'),
     map('right_command').toMeh(),
+    map(';').to('right_shift').toIfAlone(';'),
     mapSimultaneous(['a', ';']).to('left_shift'),
     mapSimultaneous(['d', 'f']).to('escape'),
     mapSimultaneous(['k', 'l']).to('return_or_enter'),
